@@ -1,15 +1,15 @@
-enum 50100 "MNB Risk Score Cal. Method" implements "MNB IRiskScoreCalMethod"
+enum 50100 "MNB Risk Score Cal. Method" implements "MNB IRiskMgt"
 {
     Extensible = true;
 
-    value(1; Item)
+    value(0; Item)
     {
         Caption = 'Item';
-        Implementation = "MNB IRiskScoreCalMethod" = "MNB ICalMethodItem";
+        Implementation = "MNB IRiskMgt" = "MNB IRiskMgtItem";
     }
-    value(2; ItemCategory)
+    value(1; ItemCategory)
     {
         Caption = 'Item Category';
-        Implementation = "MNB IRiskScoreCalMethod" = "MNB ICalMethodItemCat";
+        Implementation = "MNB IRiskMgt" = "MNB IRiskMgtItemCat";
     }
 }

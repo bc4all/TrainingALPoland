@@ -1,4 +1,4 @@
-codeunit 50101 "MNB ICalMethodItemCat" implements "MNB IRiskScoreCalMethod"
+codeunit 50101 "MNB IRiskMgtItemCat" implements "MNB IRiskMgt"
 {
     procedure CalculateRiskScore(var Item: Record Item)
     var
@@ -10,5 +10,10 @@ codeunit 50101 "MNB ICalMethodItemCat" implements "MNB IRiskScoreCalMethod"
         end;
 
         Item."MNB Risk Score" := 0;
+    end;
+
+    procedure SetRiskImpEditable(): Boolean
+    begin
+        exit(false);
     end;
 }

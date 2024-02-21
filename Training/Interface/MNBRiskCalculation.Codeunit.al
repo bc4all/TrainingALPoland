@@ -2,9 +2,9 @@ codeunit 50102 "MNB Risk Calculation"
 {
     procedure CalculateRisk(var Item: Record Item)
     var
-        IRiskScoreCalMethod: Interface "MNB IRiskScoreCalMethod";
+        IRiskIRiskMgt: Interface "MNB IRiskMgt";
     begin
-        IRiskScoreCalMethod := Item."MNB Risk Score Cal. Method";
-        IRiskScoreCalMethod.CalculateRiskScore(Item);
+        IRiskIRiskMgt := Item."MNB Risk Score Cal. Method";
+        IRiskIRiskMgt.CalculateRiskScore(Item);
     end;
 }
